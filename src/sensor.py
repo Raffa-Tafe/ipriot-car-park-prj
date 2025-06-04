@@ -1,3 +1,4 @@
+
 class Sensor:
     def __init__(self, id, is_active, car_park):
         self.id = id

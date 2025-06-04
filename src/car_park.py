@@ -1,3 +1,4 @@
+import random
 class CarPark:
     def __init__(self, location, capacity, plates=None, sensors=None, display=None):
         self.location = location
@@ -8,6 +9,5 @@ class CarPark:
 
     def __str__(self):
         return  f"Car park at {self.location}, with {self.capacity}"
-
 
 
