@@ -7,7 +7,7 @@ class CarPark:
         self.display = display
 
     def __str__(self):
-        return  #   When you print a Car park object, this method will be called. The method should return a string containing the car park's location and capacity. For example, "Car park at 123 Example Street, with 100 bays.".
+        return  f"Car park at {self.location}, with {self.capacity}"
 
 
-    
+
