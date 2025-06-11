@@ -370,11 +370,11 @@ You may want to see the number of available bays, the current temperature, and t
 Now consider, between the `CarPark`, `Sensor`, and `Display` classes, which class is responsible for each piece of information? There's no right or wrong answer here. But you should be able to justify your answer.
 
 >Q. Which class is responsible for the number of available bays (and why)?
->
+>car_park.py, available bays can usually be seen in car park
 >Q. Which class is responsible for the current temperature (and why)?
->
+> car_park.py, it gather data from car park and put it on display to be showned
 >Q. Which class is responsible for the time (and why)?
->
+>car_park.py get data from sensor.py and show it in display.py
 --------
 
 ##### Detour: implement available bays
@@ -454,7 +454,7 @@ Answer the following questions:
 >
 > 1. **Which class is responsible for each of the following pieces of information (and why)?**
 >    - _The number of available bays_
->      `Answer here...`
+>      `car_park.py is responsible for The number of available bays, because the property of avaliable_bays is in the CarPark class`
 >    - _The current temperature_
 >      `Answer here...`
 >    - _The time_
