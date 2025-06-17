@@ -16,7 +16,7 @@ class Sensor:
     def _scan_plate(self):
         return 'FAKE-' + format(random.randint(0, 999), "03d")
 
-    def detect_vihicle(self):
+    def detect_vehicle(self):
         plate = self._scan_plate()
         self.update_car_park(plate)
 class EnterySensor(Sensor):
@@ -26,7 +26,7 @@ class EnterySensor(Sensor):
 
 class ExitSensor(Sensor):
     def update_car_park(self, plate):
-        self.car_park().remove_car(plate)
+        self.car_park.remove_car(plate)
         print(f"Outgoing vehicle detected. Plate: {plate}")
 
     def _scan_plate(self):
