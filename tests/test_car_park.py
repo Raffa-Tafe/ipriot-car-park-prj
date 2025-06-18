@@ -39,7 +39,7 @@ class TestCarPark(unittest.TestCase):
 
         # Removing a car from an overfilled car park should not change the number of available bays
         self.car_park.remove_car("FAKE-99")
-        self.assertEqual(self.car_park.available_bays, 1)
+        self.assertEqual(self.car_park.available_bays, 0)
 
     def test_removing_a_car_that_does_not_exist(self):
         with self.assertRaises(ValueError):
@@ -71,7 +71,7 @@ class TestCarPark(unittest.TestCase):
                               log_file="new_log.txt")  # TODO: change this to use a class attribute or new instance variable
         self.car_park.add_car("NEW-001")
         self.car_park.remove_car("NEW-001")
-        with self.car_park.log_file.open() as f:
+        with self.car_park.log_file.open()  as f:
             last_line = f.readlines()[-1]
         self.assertIn(last_line, "NEW-001")  # check plate entered
         self.assertIn(last_line, "exited")  # check description

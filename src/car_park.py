@@ -30,13 +30,9 @@ class CarPark:
 
     # in CarPark class
     def add_car(self, plate):
-        if self.available_bays <= 0:
-            return
-        if plate not in self.plates:
-            self.plates.append(plate)
-            self.available_bays -= 1
-            self.update_display()
-            self._log_car_activity(plate, "entered")
+        self.plates.append(plate)
+        self.update_display()
+        self._log_car_activity(plate, "entered")
 
     def remove_car(self, plate):
         if plate not in self.plates:
